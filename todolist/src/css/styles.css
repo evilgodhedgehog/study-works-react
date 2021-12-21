@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Apple Color Emoji,Helvetica,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
+}
 #root {
     width: 700px;
     padding: 0px 15px;
@@ -15,28 +18,33 @@
     margin: 10px 0px;
     border-bottom: 1px solid #f0f0f0;
 }
+/* Task button*/
+.task-button {
+    display: contents;
+}
 /* Task checkbox*/
 .task-checkbox__circle {
-    border: 1px solid #dcdcdc;
+    border: 1px solid #808080;;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     overflow: hidden;
 }
 .task-checkbox__circle:hover {
     background: rgb(241, 241, 241);
+    cursor: pointer;
 }
 .task-checkbox__circle svg {
     display: inline-block;
     border: 1px solid transparent;
-    height: 24px;
-    width: 24px;
-    margin-left: -3px;
+    height: 20px;
+    width: 20px;
+    margin-left: -6.5px;
     transition: opacity .15s cubic-bezier(.4,0,1,1);
-    margin-top: -3px;
+    margin-top: -6px;
     opacity: 0;
 }
 .task-checkbox__circle.checked svg, .task-checkbox__circle:hover svg {
@@ -47,8 +55,8 @@
 .task-checkbox__circle.priority-1,
 .task-checkbox__circle.priority-2,
 .task-checkbox__circle.priority-3 {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-width: 2px;
 }
 .task-checkbox__circle.priority-1 {
@@ -69,9 +77,21 @@
 .task-checkbox__circle.priority-1 svg,
 .task-checkbox__circle.priority-2 svg,
 .task-checkbox__circle.priority-3 svg {
-    margin-left: -4px;
+    margin-left: -6px;
 }
 /* Task body*/
 .task-body{
     padding: 0px 10px;
+}
+.task-body__title{
+    color: #202020;
+    font-size: .875rem;
+}
+.task-body__description {
+    color: #808080;
+    font-size: .75rem;
+}
+.task-body__date {
+    color: #808080;
+    font-size: .75rem;
 }

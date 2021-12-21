@@ -4,7 +4,7 @@ import TaskList from './components/TaskList';
 
 function App() {
   const [tasks, setTasks] = useState([
-    {id: 1, title: 'Javascript', description: 'Description'},
+    {id: 1, title: 'Javascript', description: 'Description', date: '21 дек. , 22.36'},
 ])
 
   const createTask = (newTask) => {

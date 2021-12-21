@@ -2,13 +2,13 @@ import React from 'react';
 
 const Checkbox = () => {
     return (
-        <div className="task-checkbox">
+        <div className="task-checkbox ">
             <div className="task-checkbox__circle">
-                <svg width="24" height="24">
+                 <svg width="24" height="24">
                     <path fill="currentColor" d="M11.23 13.7l-2.15-2a.55.55 0 0 0-.74-.01l.03-.03a.46.46 0 0 0 0 .68L11.24 15l5.4-5.01a.45.45 0 0 0 0-.68l.02.03a.55.55 0 0 0-.73 0l-4.7 4.35z"></path>
                 </svg>
             </div>
-        </div>
+        </div>        
     );
 };
 

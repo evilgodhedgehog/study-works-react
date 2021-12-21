@@ -5,11 +5,15 @@ import Input from './UI/input/Input';
 const TaskForm = ({create}) => {
 
     const [task, setTask] = useState({title: '', description: ''});
-    
+    const locale = 'ru';
+    const today = new Date();
+    const date = `${today.getDate()} ${today.toLocaleDateString(locale, { month: 'short' })}\n`;  
+    const time = today.toLocaleTimeString(locale, { hour: 'numeric', hour24: true, minute: 'numeric' });
+  
     const addNewTask = (e) => {
         e.preventDefault();
         const newTask = {
-            ...task, id: Date.now(), date: Date.now()
+            ...task, id: Date.now(), date: [date, ', ', time]
         }
         create(newTask);
         setTask({title: '', description: ''});
