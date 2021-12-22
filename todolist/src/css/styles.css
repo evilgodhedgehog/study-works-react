@@ -14,13 +14,16 @@ body{
 /* Task */
 .task {
     display: flex;
-    padding: 15px 10px;
+    padding: 10px 10px;
     margin: 10px 0px;
     border-bottom: 1px solid #f0f0f0;
 }
 /* Task button*/
 .task-button {
     display: contents;
+}
+.task-checkbox {
+    margin-top: 5px;
 }
 /* Task checkbox*/
 .task-checkbox__circle {
@@ -86,12 +89,38 @@ body{
 .task-body__title{
     color: #202020;
     font-size: .875rem;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 21px;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .task-body__description {
     color: #808080;
     font-size: .75rem;
+    flex-basis: 100%;
+    font-size: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .task-body__date {
     color: #808080;
     font-size: .75rem;
+}
+.add-task-form {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: text;
+}
+.add-task-form:focus-within {
+    border: 1px solid rgba(0,0,0, .4);
 }

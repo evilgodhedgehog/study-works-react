@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Button from './UI/button/Button';
 import Input from './UI/input/Input';
+import Textarea from './UI/textarea/Textarea';
 
 const TaskForm = ({create}) => {
 
@@ -20,20 +21,21 @@ const TaskForm = ({create}) => {
     }
 
     return (
-        <form>
+      <form className='add-task-form'>
         <Input 
           value={task.title} 
           onChange={e => setTask({...task, title: e. target.value})} 
           type='text' 
           placeholder='Заголовок задачи'
         />
-        <Input 
+        <Textarea 
           value={task.description} 
           onChange={e => setTask({...task, description: e. target.value})} 
           type='text' 
           placeholder='Описание задачи'
         />
         <Button onClick={addNewTask}>Создать задачу</Button>  
+        <Button>Отмена</Button>  
       </form>
     );
 };

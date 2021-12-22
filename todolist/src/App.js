@@ -17,8 +17,8 @@ function App() {
   
   return (
     <div className='app'>
-      <TaskForm create={createTask}/>
       <TaskList remove={removeTask} tasks={tasks}/>
+      <TaskForm create={createTask}/>
     </div>
   );
 }

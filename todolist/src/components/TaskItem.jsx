@@ -8,7 +8,7 @@ const TaskItem = (props) => {
                 <Checkbox />
             </button>
             <div className='task-body'>
-                <div className="task-body__title">{props.index}. {props.task.title}</div>
+                <div className="task-body__title">{props.task.title}</div>
                 <div className="task-body__description">{props.task.description}</div>
                 <div className="task-body__date">{props.task.date}</div>
             </div>

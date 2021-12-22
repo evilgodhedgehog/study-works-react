@@ -1,8 +1,21 @@
 .btn {
-    padding: 5px 15px;
-    color: teal;
     font-size: .8rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    line-height: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
     background: transparent;
-    border: 1px solid teal;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #000;
     cursor: pointer;
+    margin: 10px 5px 0px 5px;
+}
+.btn:first-child{
+    margin-left: 0px;
+}
+.btn.active {
+    opacity: 1;
 }
