@@ -11,10 +11,12 @@
     padding: 0 10px;
     color: #000;
     cursor: pointer;
-    margin: 10px 5px 0px 5px;
+    margin: 10px 10px 0px 0px;
 }
-.btn:first-child{
-    margin-left: 0px;
+.btn.red {
+    background: #db4c3f;
+    color: #fff;
+    border: none;
 }
 .btn.active {
     opacity: 1;
