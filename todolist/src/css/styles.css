@@ -138,19 +138,7 @@ main {
     color: #808080;
     font-size: .75rem;
 }
-.add-task-form {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: text;
-    display: block;
-}
-.add-task-form.show {
-    display: block;
-}
-.add-task-form:focus-within {
-    border: 1px solid rgba(0,0,0, .4);
-}
+
 .task-list-actions {
     display: none;
     justify-content: flex-end;

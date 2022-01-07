@@ -1,0 +1,13 @@
+.addTaskForm {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: text;
+    display: none;
+}
+.addTaskForm.show {
+    display: block;
+}
+.addTaskForm:focus-within {
+    border: 1px solid rgba(0,0,0, .4);
+}

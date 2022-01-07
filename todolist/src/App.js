@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import TaskForm from './components/TaskForm';
+import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList';
 import Button from './components/UI/button/Button';
 
@@ -8,7 +8,7 @@ function App() {
     {id: 1, title: 'Javascript', description: 'Description', date: '21 дек. , 22.36'},
     {id: 2, title: 'React.js', description: 'Description', date: '20 дек. , 14.36'},
     {id: 3, title: '.NET', description: 'Description', date: '19 дек. , 19.36'},
-])
+  ])
 
   const createTask = (newTask) => {
     setTasks([...tasks, newTask])
@@ -18,16 +18,15 @@ function App() {
     setTasks(tasks.filter(p => p.id !== task.id))
   }
 
-  function showTaskForm(){
-
-  }
-  
+  const [form, setForm] = useState(false);
+  const [addForm, setAddForm] = useState(true);
+ 
   return (
     <div className='app'>
       <header></header>
       <main>
         <TaskList remove={removeTask} tasks={tasks}/>
-        {/* <Button onClick={showTaskForm}>
+        <Button onClick={() => setForm(true)} visible={addForm} setVisible={setAddForm}>
           <span className="icon_add" aria-hidden="true">
             <svg width="13" height="13">
               <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 
@@ -35,8 +34,8 @@ function App() {
             </svg>
           </span> 
           Добавить задачу
-        </Button>  */}
-        <TaskForm create={createTask}/>
+        </Button>
+        <TaskForm create={createTask} visible={form} setVisible={setForm}/>
       </main>
     </div>
   );
