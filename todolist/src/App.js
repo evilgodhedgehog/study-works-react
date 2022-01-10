@@ -18,15 +18,14 @@ function App() {
     setTasks(tasks.filter(p => p.id !== task.id))
   }
 
-  const [form, setForm] = useState(false);
-  const [addForm, setAddForm] = useState(true);
+  const [formIsVisible, setFormIsVisible] = useState(false);
  
   return (
     <div className='app'>
       <header></header>
       <main>
         <TaskList remove={removeTask} tasks={tasks}/>
-        <Button onClick={() => setForm(true)} visible={addForm} setVisible={setAddForm}>
+        <Button onClick={() => setFormIsVisible(true)} visible={!formIsVisible} setVisible={setFormIsVisible}>
           <span className="icon_add" aria-hidden="true">
             <svg width="13" height="13">
               <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 
@@ -35,7 +34,7 @@ function App() {
           </span> 
           Добавить задачу
         </Button>
-        <TaskForm create={createTask} visible={form} setVisible={setForm}/>
+        <TaskForm create={createTask} visible={formIsVisible} setVisible={setFormIsVisible}/>
       </main>
     </div>
   );

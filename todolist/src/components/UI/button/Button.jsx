@@ -16,4 +16,4 @@ const Button = ({children, visible, ...props}) => {
     );
 };
 
-export default Button;
+export default Button
