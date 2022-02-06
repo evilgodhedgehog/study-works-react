@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsCellInfo from './NewsCellInfo';
+import SocialShareWindow from './SocialShareWindow';
 
 const NewsCell = (props) => {
     return (
@@ -14,6 +15,7 @@ const NewsCell = (props) => {
                 </span>
             </a>
             <NewsCellInfo link={props.link} date={props.date} views={props.views}/>
+            <SocialShareWindow />
         </div>
     );
 };
