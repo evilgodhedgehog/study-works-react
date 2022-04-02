@@ -2,7 +2,7 @@ import React from 'react';
 
 const SocialShareWindow = (props) => {
     return (
-        <div className='share-full'>
+        <div className={`share-full ${props.visible ? 'active' : ''}`}>
             <ul>
                 <li>
                     <a data-name='facebook'>
